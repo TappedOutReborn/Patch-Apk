@@ -223,6 +223,10 @@ def replace_urls(replacements: Dict[str, str]) -> List[str]:
                         f.truncate()
                         f.write(new_content)
                         log.append(f"Replaced {count} occurrence(s) in {file_path}")
+                        # Log the URLs being replaced
+                        for old_url, new_url in replacements.items():
+                            if old_url in content:
+                                logger.info(f"Replaced URL: {old_url} -> {new_url} in {file_path}")
             except Exception as e:
                 logger.warning(f"Error processing {file_path}: {e}")
     
@@ -449,3 +453,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = APKPatcherGUI(root)
     root.mainloop()
+
+# coded by @bodnjenie
+# credit to @tjac for patching logic
+# ai refactor by @hclivess
