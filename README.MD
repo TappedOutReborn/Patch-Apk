@@ -35,12 +35,12 @@ This script provides a graphical user interface (GUI) for patching APK files by 
 
 ### Usage
 1. Open the script to launch the GUI.
-2. In the provided fields, enter the server IP and DLC IP in the format: `http://[ip_here]:80`
+2. In the provided fields, enter the server IP and DLC IP in the format: `http://[ip_here]:[port_here]`
 3. Click on "Patch APK" to start the patching process.
 
 #### Example
-- Server IP: `http://192.168.1.1:80`
-- DLC IP: `http://192.168.1.2:80`
+- Server IP: `http://192.168.1.2:4242`
+- DLC IP: `http://192.168.1.2:4242`
 
 ---
 
