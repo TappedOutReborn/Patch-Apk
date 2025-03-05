@@ -193,11 +193,7 @@ def patch_url(file_bytes: bytearray, new_url: str) -> bytearray:
     # The original URL length (often 88 bytes)
     original_len = len(original_bytes)
 
-    # 1) Force the new URL to end with '/static/'
-    #    - Strip any trailing slash, then add '/static/'
-    #    - e.g. "http://example.com" => "http://example.com/static/"
-    #    - e.g. "http://example.com/" => "http://example.com/static/"
-    new_url = new_url.rstrip("/") + "/static/"
+    new_url = new_url.rstrip("/") + "/"
 
     # 2) Convert to bytes
     new_url_bytes = bytearray(new_url, "utf-8")
@@ -390,11 +386,12 @@ run_button.grid(row=4, column=0, columnspan=3, pady=5)
 check_button = ttk.Button(frame, text="Check Dependencies", command=check_dependencies)
 check_button.grid(row=5, column=0, columnspan=3, pady=5)
 
-footer_label = ttk.Label(root, text="Bodnjenie™", background="#2e2e2e", foreground="#ffffff", anchor="e")
+footer_label = ttk.Label(root, text="", background="#2e2e2e", foreground="#ffffff", anchor="e")
 footer_label.pack(side="bottom", fill="x", padx=10, pady=5)
 
 root.mainloop()
 
 # coded by @bodnjenie
+# maintained by @glitchedpanda
 # credit to @tjac for patching logic
 

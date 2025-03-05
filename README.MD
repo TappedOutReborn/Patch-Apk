@@ -1,12 +1,8 @@
 # Patch APK
 Simple scripts to patch the Tapped Out APK with new server urls. All credit to tehfens for the patch_native.py script.
-
-## Overview
-This document provides instructions for two different scripts to patch the Tapped Out APK with new server URLs. 
-
 ---
 
-## Linux Command-Line Patcher
+## Command-Line Patcher
 
 ### Requirements
 - A Tapped Out APK
@@ -20,12 +16,15 @@ This document provides instructions for two different scripts to patch the Tappe
 ### Usage
 To use the command-line script, run the following command in your terminal:
 
-```./patch-apk.sh APK_TO_PATCH NEW_GAMESERVER_URL NEW_DLCSERVER_URL```
+```./patch_apk.sh APK_TO_PATCH NEW_GAMESERVER_URL NEW_DLCSERVER_URL```
 
+Example
+
+```./patch_apk.sh tappedout.apk http://192.168.1.42:4242 http://192.168.1.42:4242/dlc/```
 
 ---
 
-## Windows GUI Patcher
+## GUI Patcher
 
 ### Overview
 This script provides a graphical user interface (GUI) for patching APK files by entering specific server and DLC IP addresses.
@@ -40,7 +39,7 @@ This script provides a graphical user interface (GUI) for patching APK files by 
 
 #### Example
 - Server IP: `http://192.168.1.2:4242`
-- DLC IP: `http://192.168.1.2:4242`
+- DLC IP: `http://192.168.1.2:4242/dlc/`
 
 ---
 
