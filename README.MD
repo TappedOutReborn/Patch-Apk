@@ -1,5 +1,7 @@
 # Patch APK
+
 Simple scripts to patch the Tapped Out APK with new server urls. All credit to tehfens for the patch_native.py script.
+
 ---
 
 ## Command-Line Patcher
